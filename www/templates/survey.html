@@ -1,0 +1,35 @@
+<ion-view title="Survey" id="page4" style="background-color:##FFFFFF;">
+  <ion-content padding="true" style="background: url(img/4oAtIT9tQumivXhM9E8K_370799.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <div id="survey-markdown3" class="show-list-numbers-and-dots">
+      <p style="color:#FFFFFF;">Fill out this form, we'll record the results</p>
+    </div>
+	<!--forms displaying the relevant details for the user to input data using angular directives under ng model-->
+    <form id="survey-form2" class="list">
+      <label class="item item-input" id="survey-input3">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="" ng-model="data.name">
+      </label>
+	  <!--Colours for the user to choose from. Angular directives are used under ng model-->
+      <label class="item item-select" id="survey-select1">
+        <span class="input-label">Favourite Colour</span>
+        <select ng-model="data.favorite_color">
+          <option>Green</option>
+          <option>Blue</option>
+          <option>Red</option>
+          <option>Yellow</option>
+          <option>Purple</option>
+          <option>Brown</option>
+          <option>Orange</option>
+          <option>Black</option>
+        </select>
+      </label>
+	  <!--Three sports for the user to pick from utilizing angular directives under the name ng model and ng values-->
+      <ion-item class="item-divider" id="survey-list-item-divider1"> Favourite Sports to Play</ion-item>
+      <ion-radio id="survey-radio3" name="leisure" ng-model="data.favorite_sport" ng-value="&quot;Rugby&quot;">Rugby</ion-radio>
+      <ion-radio id="survey-radio4" name="leisure" ng-model="data.favorite_sport" ng-value="&quot;Gaelic&quot;">Gaelic</ion-radio>
+      <ion-radio id="survey-radio5" name="leisure" ng-model="data.favorite_sport" ng-value="&quot;Hurling&quot;">Hurling</ion-radio>
+    </form>
+	<!--angular directives that confirm the data is submitted and transferred to the google sheets api-->
+    <button id="survey-button1" ng-click="submit()" ng-disabled="submitting" class="button button-balanced  button-block">Submit</button>
+  </ion-content>
+</ion-view>

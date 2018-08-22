@@ -1,0 +1,12 @@
+<!--Results page showing all the users results and the data stored in the google sheets api. Angular directives are being utilized under the name ng-repeat and style-->
+<ion-view title="Results" id="page3" style="background-color:##FFFFFF;" ng-click="toggleDelete">
+  <ion-content padding="true" style="background: url(img/zvp5l9AkQSW0PP3ojl5p_370799.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <ion-list id="results-list1" show-delete="showDelete">
+      <ion-item class="item-avatar" id="results-list-item1" ng-repeat="survey in surveys | orderBy: '-'" style="background-color:{{survey.favorite_color}};">
+        <h2>{{survey.name}}</h2>
+        <p>likes {{survey.favorite_sport}}</p>
+        <ion-delete-button class="ion-minus-circled"></ion-delete-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
